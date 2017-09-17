@@ -8,5 +8,5 @@ database: WideWorldImporters
 user: sa
 password: Yukon900
 driver: tiny_tds
-port: 32188
+port: 31441
 console_enabled: true
