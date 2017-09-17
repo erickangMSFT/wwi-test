@@ -9,4 +9,4 @@ user: sa
 password: Yukon900
 driver: tiny_tds
 port: 32188
-console_enabled: false
+console_enabled: true
