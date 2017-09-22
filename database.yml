@@ -6,7 +6,7 @@
 server: kubernetes
 database: WideWorldImporters
 user: sa
-password: Yukon900
+password: SqlDevOps2017
 driver: tiny_tds
 port: 31431
 console_enabled: true
