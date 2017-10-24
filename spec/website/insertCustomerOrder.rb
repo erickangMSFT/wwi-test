@@ -3,7 +3,7 @@ describe 'WideWorldImporters: Website.InsertCustomerOrders' do
     # UDTTs
     # @Orders Website.OrderList READONLY,
     # @OrderLines Website.OrderLineList READONLY,
-
+    # demo simulation
     before :each do
         load_csv('WideWorldImporters/customers/load/sales_customers.csv', 'Sales.Customers')
       end
