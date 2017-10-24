@@ -3,10 +3,10 @@
 
 # Replace the following with your connection information.
 # Note that at this point Slacker only works with SQL Server authentication.
-server: erickang-k8s-agent1
+server: mssql 
 database: WideWorldImporters
 user: sa
 password: SqlDevOps2017
 driver: tiny_tds
-port: 31431
+port: 1433
 console_enabled: true
