@@ -107,7 +107,7 @@ describe 'WideWorldImporters: Website.InsertCustomerOrders' do
             :OrderLines => order_lines, 
             :OrdersCreatedByPersonID => 1, 
             :SalespersonPersonID => 1)
-    }.to raise_error(TinyTds::Error)
+    }.to raise_error
     end
 
     it 'fails for an invalid creted by person id' do
@@ -140,7 +140,7 @@ describe 'WideWorldImporters: Website.InsertCustomerOrders' do
                 :OrderLines => order_lines, 
                 :OrdersCreatedByPersonID => 0, #invalid created by person id
                 :SalespersonPersonID => 1)
-        }.to raise_error(TinyTds::Error)
+        }.to raise_error
     end
 
     it 'fails for an invalid sales person id' do
