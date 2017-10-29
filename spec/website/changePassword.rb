@@ -8,7 +8,7 @@ describe 'WideWorldImporters: Website.ChangePassword' do
                 :NewPassword => 'Yukon1000')}
             .not_to raise_error
     end
-s
+
     # it 'denies PersonID == 1' do
     #     expect{
     #         sql.WideWorldImporters.website.changePassword(
