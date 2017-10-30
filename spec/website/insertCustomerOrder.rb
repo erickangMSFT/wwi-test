@@ -71,8 +71,8 @@ describe 'WideWorldImporters: Website.InsertCustomerOrders' do
             :OrderLines => order_lines, 
             :OrdersCreatedByPersonID => 1, 
             :SalespersonPersonID => 1)        
-        res = query('select * from Sales.Orders')
-        expect(res.count).to be == 0    
+        orders = query('select * from Sales.Orders')
+        expect(orders.count).to be == 0    
     end
 
     it 'fails for invalid orderlines' do
@@ -105,8 +105,10 @@ describe 'WideWorldImporters: Website.InsertCustomerOrders' do
         :OrdersCreatedByPersonID => 1, 
         :SalespersonPersonID => 1)    
 
-    res = query('select * from Sales.Orders')
-    expect(res.count).to be == 0   
+    orders = query('select * from Sales.Orders')
+    orderlines = query('select * from Sales.OrderLines')
+    expect(orders.count).to be == 0 
+    expect(orderlines.count).to be == 0
     end
 
     # it 'fails for an invalid creted by person id' do
