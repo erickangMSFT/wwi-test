@@ -98,15 +98,15 @@ describe 'WideWorldImporters: Website.InsertCustomerOrders' do
             [1, 500, 'Invalid StockItemID', 2]
         ]
     )
+    sproc(
+        'Website.InsertCustomerOrders', 
+        :Orders => order_list, 
+        :OrderLines => order_lines, 
+        :OrdersCreatedByPersonID => 1, 
+        :SalespersonPersonID => 1)    
 
-    expect{
-        sproc(
-            'Website.InsertCustomerOrders', 
-            :Orders => order_list, 
-            :OrderLines => order_lines, 
-            :OrdersCreatedByPersonID => 1, 
-            :SalespersonPersonID => 1)
-    }.to raise_error
+    res = query('select * from Sales.Orders')
+    expect(res.count).to be == 0   
     end
 
     # it 'fails for an invalid creted by person id' do
